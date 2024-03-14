@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using System;
 using System.Linq;
+using LeetCode_Algorithms;
 
 namespace Sandbox
 {
@@ -8,6 +9,8 @@ namespace Sandbox
     {
         public static void Main(string[] args)
         {
+            _1 twosumalgorithm = new _1();
+            twosumalgorithm.TwoSum([3, 2, 4], 6);
             Solution solution = new Solution();
             int PivotInteger(int n)
             {

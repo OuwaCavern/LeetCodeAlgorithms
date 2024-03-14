@@ -1,0 +1,15 @@
+C:\Users\emirc\source\repos\LeetCode Algorithms\bin\Debug\net8.0\LeetCode Algorithms.exe
+C:\Users\emirc\source\repos\LeetCode Algorithms\bin\Debug\net8.0\LeetCode Algorithms.deps.json
+C:\Users\emirc\source\repos\LeetCode Algorithms\bin\Debug\net8.0\LeetCode Algorithms.runtimeconfig.json
+C:\Users\emirc\source\repos\LeetCode Algorithms\bin\Debug\net8.0\LeetCode Algorithms.dll
+C:\Users\emirc\source\repos\LeetCode Algorithms\bin\Debug\net8.0\LeetCode Algorithms.pdb
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.AssemblyInfoInputs.cache
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.AssemblyInfo.cs
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.sourcelink.json
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.dll
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\refint\LeetCode Algorithms.dll
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.pdb
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.genruntimeconfig.cache
+C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\ref\LeetCode Algorithms.dll
