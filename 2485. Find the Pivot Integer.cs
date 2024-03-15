@@ -12,12 +12,17 @@ namespace Sandbox
         {
             _1 twosumalgorithm = new _1();
             twosumalgorithm.TwoSum([3, 2, 4], 6);
-            ListNode l1 = new ListNode(2);
-            l1.next = new ListNode(4);
-            l1.next.next = new ListNode(3);
-            ListNode l2 = new ListNode(5);
-            l2.next = new ListNode(6);
-            l2.next.next = new ListNode(4);
+            ListNode l1 = new ListNode(9);
+            ListNode l2 = new ListNode(1);
+            l2.next = new ListNode(9);
+            l2.next.next = new ListNode(9);
+            l2.next.next.next = new ListNode(9);
+            l2.next.next.next.next = new ListNode(9);
+            l2.next.next.next.next.next = new ListNode(9);
+            l2.next.next.next.next.next.next = new ListNode(9);
+            l2.next.next.next.next.next.next.next = new ListNode(9);
+            l2.next.next.next.next.next.next.next.next = new ListNode(9);
+            l2.next.next.next.next.next.next.next.next.next = new ListNode(9);
             _2 addtwonumbersalgo = new _2();
             addtwonumbersalgo.AddTwoNumbers(l1, l2);
             Solution solution = new Solution();

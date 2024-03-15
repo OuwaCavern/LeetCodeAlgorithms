@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -63,13 +64,15 @@ namespace LeetCode_Algorithms
                 l1 = l1.next;
             }
             string correctlySortedStringL1 = "";
+            listOfCorrectOrderL1.Reverse();
+
 
             foreach (int n in listOfCorrectOrderL1) 
             {
                 correctlySortedStringL1 += n;
             }
-            int correctlySortedIntL1;
-            Int32.TryParse(correctlySortedStringL1, out correctlySortedIntL1);
+            BigInteger correctlySortedIntL1;
+            BigInteger.TryParse(correctlySortedStringL1, out correctlySortedIntL1);
 
             List<int> listOfCorrectOrderL2 = new List<int>();
             while (l2 != null) 
@@ -78,22 +81,24 @@ namespace LeetCode_Algorithms
                 l2 = l2.next;
             }
             string correctlySortedStringL2 = "";
+            listOfCorrectOrderL2.Reverse();
 
             foreach (int n in listOfCorrectOrderL2)
             {
                 correctlySortedStringL2 += n;
             }
-            int correctlySortedIntL2;
-            Int32.TryParse(correctlySortedStringL2, out correctlySortedIntL2);
+            BigInteger correctlySortedIntL2;
+            BigInteger.TryParse(correctlySortedStringL2, out correctlySortedIntL2);
 
-            int sum = correctlySortedIntL1 + correctlySortedIntL2;
+            BigInteger sum = correctlySortedIntL1 + correctlySortedIntL2;
 
             string sumString = sum.ToString();
             ListNode lresult = new ListNode(Int32.Parse(sumString.Substring(sumString.Length -1, 1)));
+            ListNode currentNode = lresult;
             for (int i = sumString.Length - 2; i >= 0; i--)
             {
-                lresult.next = new ListNode(Int32.Parse(sumString.Substring(i, 1)));
-                lresult = lresult.next;
+                currentNode.next = new ListNode(Int32.Parse(sumString.Substring(i, 1)));
+                currentNode = currentNode.next;
             }
             return lresult;
         }
