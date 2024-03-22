@@ -11,30 +11,33 @@ namespace LeetCode_Algorithms
     {
         public int LengthOfLongestSubstring(string s)
         {
-            bool duplicateFound = false;
+            int firstOccurrenceIndexOfDuplicate = 0;
             List<string> currentLongestString = new List<string>();
             List<string> topLongestString = new List<string>();
-            currentLongestString.Add(s.Substring(0, 1));
-            for (int substr = 1; substr < s.Length -1; substr++)
+            for (int substr = 0; substr < s.Length; substr++)
             {
                 string initialStr = s.Substring(substr, 1);
-                string nextStr = s.Substring(substr + 1, 1);
-                if (initialStr != nextStr & !currentLongestString.Contains(initialStr))
+                if (!currentLongestString.Contains(initialStr))
                 {
                     currentLongestString.Add(initialStr);
                     continue;
                 }
-                else if (initialStr == nextStr & currentLongestString.Contains(initialStr))
+                else
                 {
+                    firstOccurrenceIndexOfDuplicate = currentLongestString.IndexOf(initialStr);
                     if (topLongestString.Count < currentLongestString.Count)
                     {
-                        topLongestString = currentLongestString;
+                        topLongestString = new List<string>(currentLongestString);
                     }
+                    currentLongestString.RemoveRange(0, firstOccurrenceIndexOfDuplicate+1);
                     currentLongestString.Add(initialStr);
                 }
             }
-            return currentLongestString.Count;
+            if (topLongestString.Count < currentLongestString.Count)
+            {
+                topLongestString = currentLongestString;
+            }
+            return topLongestString.Count;
         }
-
     }
 }

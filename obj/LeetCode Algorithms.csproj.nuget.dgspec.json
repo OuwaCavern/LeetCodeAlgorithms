@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emirc\\source\\repos\\LeetCode Algorithms\\LeetCode Algorithms.csproj": {}
+    "C:\\Users\\Roxze\\Source\\Repos\\OuwaCavern\\LeetCodeAlgorithms\\LeetCode Algorithms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emirc\\source\\repos\\LeetCode Algorithms\\LeetCode Algorithms.csproj": {
+    "C:\\Users\\Roxze\\Source\\Repos\\OuwaCavern\\LeetCodeAlgorithms\\LeetCode Algorithms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emirc\\source\\repos\\LeetCode Algorithms\\LeetCode Algorithms.csproj",
+        "projectUniqueName": "C:\\Users\\Roxze\\Source\\Repos\\OuwaCavern\\LeetCodeAlgorithms\\LeetCode Algorithms.csproj",
         "projectName": "LeetCode Algorithms",
-        "projectPath": "C:\\Users\\emirc\\source\\repos\\LeetCode Algorithms\\LeetCode Algorithms.csproj",
-        "packagesPath": "C:\\Users\\emirc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emirc\\source\\repos\\LeetCode Algorithms\\obj\\",
+        "projectPath": "C:\\Users\\Roxze\\Source\\Repos\\OuwaCavern\\LeetCodeAlgorithms\\LeetCode Algorithms.csproj",
+        "packagesPath": "C:\\Users\\Roxze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Roxze\\Source\\Repos\\OuwaCavern\\LeetCodeAlgorithms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\emirc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Roxze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

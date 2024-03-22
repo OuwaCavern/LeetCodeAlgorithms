@@ -26,7 +26,7 @@ namespace Sandbox
             _2 addtwonumbersalgo = new _2();
             addtwonumbersalgo.AddTwoNumbers(l1, l2);
             _3 longestSubstring = new _3();
-            longestSubstring.LengthOfLongestSubstring("abcabcbb");
+            longestSubstring.LengthOfLongestSubstring("pwwkew");
             Solution solution = new Solution();
         }
     }

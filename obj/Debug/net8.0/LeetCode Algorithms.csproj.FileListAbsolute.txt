@@ -13,3 +13,18 @@ C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\refint\LeetCode
 C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.pdb
 C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\LeetCode Algorithms.genruntimeconfig.cache
 C:\Users\emirc\source\repos\LeetCode Algorithms\obj\Debug\net8.0\ref\LeetCode Algorithms.dll
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\bin\Debug\net8.0\LeetCode Algorithms.exe
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\bin\Debug\net8.0\LeetCode Algorithms.deps.json
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\bin\Debug\net8.0\LeetCode Algorithms.runtimeconfig.json
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\bin\Debug\net8.0\LeetCode Algorithms.dll
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\bin\Debug\net8.0\LeetCode Algorithms.pdb
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\LeetCode Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\LeetCode Algorithms.AssemblyInfoInputs.cache
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\LeetCode Algorithms.AssemblyInfo.cs
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\LeetCode Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\LeetCode Algorithms.sourcelink.json
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\LeetCode Algorithms.dll
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\refint\LeetCode Algorithms.dll
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\LeetCode Algorithms.pdb
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\LeetCode Algorithms.genruntimeconfig.cache
+C:\Users\Roxze\Source\Repos\OuwaCavern\LeetCodeAlgorithms\obj\Debug\net8.0\ref\LeetCode Algorithms.dll
