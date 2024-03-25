@@ -15,15 +15,13 @@ namespace LeetCode_Algorithms
             Array.Sort(combinedArray);
             int lengthOfArray = combinedArray.Length;
             double medianValue;
-            if (lengthOfArray % 2 == 0)
+            if (lengthOfArray % 2 == 1)
             {
                 medianValue = combinedArray[lengthOfArray/2];
             }
             else
             {
-                int lowerMedian = (int)lengthOfArray/2 - 0,5;
-                int upperMedian = (int)lengthOfArray/2 + 0,5;
-                medianValue = combinedArray[lowerMedian] + combinedArray[upperMedian];
+                medianValue = (combinedArray[lengthOfArray/2] + combinedArray[(lengthOfArray/2 - 1)])/2.0;
             }
             return medianValue;
         }

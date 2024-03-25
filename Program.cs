@@ -27,6 +27,8 @@ namespace Sandbox
             addtwonumbersalgo.AddTwoNumbers(l1, l2);
             _3 longestSubstring = new _3();
             longestSubstring.LengthOfLongestSubstring("pwwkew");
+            _4 medianAlgo = new _4();
+            medianAlgo.FindMedianSortedArrays([1, 2], [3, 4]);
             Solution solution = new Solution();
         }
     }
