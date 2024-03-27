@@ -17,23 +17,22 @@ namespace LeetCode_Algorithms
             Array.Sort(nums);
             for (int i = 0; i < nums.Length; i++)
             {
-                    multiplicationResult = 0;
-                    for (int j = 0; j < nums.Length; j++) 
+                multiplicationResult = nums[i];
+                for (int j = 0; j < nums.Length; j++) 
+                {
+                    if (i == j)
                     {
-                            if (i == j)
-                            {
-                                j++;
-                                continue;
-                            }
-                            multiplicationResult += nums[i] * nums[j];
-                        if (multiplicationResult < k)
-                        {
-                            listOfValidNumbers.Add(nums[j]);
-                            List<int> listToAdd = new List<int>(listOfValidNumbers); 
-                            listOfValidSubarrays.Add(listToAdd);
-                        }
-                        }
+                        continue;
                     }
+                    multiplicationResult = multiplicationResult * nums[j];
+                    if (multiplicationResult < k)
+                    {
+                        listOfValidNumbers.Add(nums[j]);
+                        List<int> listToAdd = new List<int>(listOfValidNumbers); 
+                        listOfValidSubarrays.Add(listToAdd);
+                    }
+                }
+            }
             listOfValidSubarrays.Distinct().ToList();
             return listOfValidSubarrays.Count;
         }
