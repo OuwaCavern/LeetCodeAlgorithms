@@ -29,6 +29,8 @@ namespace Sandbox
             longestSubstring.LengthOfLongestSubstring("pwwkew");
             _4 medianAlgo = new _4();
             medianAlgo.FindMedianSortedArrays([1, 2], [3, 4]);
+            _713 subarrayProductAlgo = new _713();
+            subarrayProductAlgo.NumSubarrayProductLessThanK([1,1,1], 2);
             Solution solution = new Solution();
         }
     }

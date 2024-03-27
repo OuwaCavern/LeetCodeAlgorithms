@@ -10,24 +10,32 @@ namespace LeetCode_Algorithms
     {
         public int NumSubarrayProductLessThanK(int[] nums, int k)
         {
-            List<int> numsList = new List<int>();
-            int multiplicationResult = 1;
-            do
+            List<List<int>> listOfValidSubarrays = new List<List<int>>();
+            List<int> listOfValidNumbers = new List<int>();
+            int totalNumberOfContigousSubarrays = (int)Math.Pow(2, nums.Length) - 1;
+            int multiplicationResult = 0;
+            Array.Sort(nums);
+            for (int i = 0; i < nums.Length; i++)
             {
-                foreach (int i in numsList)
-                {
-                    multiplicationResult = multiplicationResult * i;
-                }
-                if (multiplicationResult < k)
-                {
-                    return (int)Math.Pow(2, numsList.Count);
-                }
-                else
-                {
-                    numsList.Remove(numsList.Min());
-                }
-            } while (multiplicationResult < k);
-            return 0;
+                    multiplicationResult = 0;
+                    for (int j = 0; j < nums.Length; j++) 
+                    {
+                            if (i == j)
+                            {
+                                j++;
+                                continue;
+                            }
+                            multiplicationResult += nums[i] * nums[j];
+                        if (multiplicationResult < k)
+                        {
+                            listOfValidNumbers.Add(nums[j]);
+                            List<int> listToAdd = new List<int>(listOfValidNumbers); 
+                            listOfValidSubarrays.Add(listToAdd);
+                        }
+                        }
+                    }
+            listOfValidSubarrays.Distinct().ToList();
+            return listOfValidSubarrays.Count;
         }
     }
 }
