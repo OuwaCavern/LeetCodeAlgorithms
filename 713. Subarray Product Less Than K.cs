@@ -13,11 +13,16 @@ namespace LeetCode_Algorithms
             List<List<int>> listOfValidSubarrays = new List<List<int>>();
             List<int> listOfValidNumbers = new List<int>();
             int totalNumberOfContigousSubarrays = (int)Math.Pow(2, nums.Length) - 1;
-            int multiplicationResult = 0;
             Array.Sort(nums);
             for (int i = 0; i < nums.Length; i++)
             {
-                multiplicationResult = nums[i];
+                List<int> singles = new List<int>();
+                if (i < k)
+                {
+                    singles.Add(nums[i]);
+                    listOfValidSubarrays.Add((new List<int>(singles)));
+                }
+                int multiplicationResult = nums[i];
                 for (int j = 0; j < nums.Length; j++) 
                 {
                     if (i == j)
@@ -28,12 +33,17 @@ namespace LeetCode_Algorithms
                     if (multiplicationResult < k)
                     {
                         listOfValidNumbers.Add(nums[j]);
+                        listOfValidNumbers = listOfValidNumbers.Distinct().ToList();
                         List<int> listToAdd = new List<int>(listOfValidNumbers); 
                         listOfValidSubarrays.Add(listToAdd);
                     }
                 }
+                singles.Clear();
             }
-            listOfValidSubarrays.Distinct().ToList();
+            for (int i=0; i < listOfValidSubarrays.Count; i++)
+            {
+                
+            }
             return listOfValidSubarrays.Count;
         }
     }

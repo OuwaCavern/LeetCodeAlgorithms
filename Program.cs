@@ -30,7 +30,7 @@ namespace Sandbox
             _4 medianAlgo = new _4();
             medianAlgo.FindMedianSortedArrays([1, 2], [3, 4]);
             _713 subarrayProductAlgo = new _713();
-            subarrayProductAlgo.NumSubarrayProductLessThanK([1,1,1], 2);
+            subarrayProductAlgo.NumSubarrayProductLessThanK([10, 5, 2, 6], 100);
             Solution solution = new Solution();
         }
     }
