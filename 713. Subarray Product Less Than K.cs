@@ -42,7 +42,7 @@ namespace LeetCode_Algorithms
             }
             for (int i=0; i < listOfValidSubarrays.Count; i++)
             {
-                
+               // if (listOfValidSubarrays[i])
             }
             return listOfValidSubarrays.Count;
         }
