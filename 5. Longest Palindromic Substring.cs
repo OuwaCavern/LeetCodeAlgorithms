@@ -20,13 +20,15 @@ namespace LeetCode_Algorithms
 
             List<string> longPalindromes = new List<string>();
             List<string> substringsOfTheWord = new List<string>();
+            int lengthOfTheString = s.Length;
+            substringsOfTheWord.Add(s);
             if (s.Length == 1)
             {
                 longPalindromes.Add(s);
             }
-            for (int i = 0; i < s.Length; i++)
+            for (int i = 0; i < lengthOfTheString; i++)
             {
-                for (int j = 1; j <= j + 1 - i && j < s.Length; j++)
+                for (int j = 1; j <= lengthOfTheString - i && j < lengthOfTheString; j++)
                 {
                     substringsOfTheWord.Add(s.Substring(i, j));
                 }
@@ -41,15 +43,30 @@ namespace LeetCode_Algorithms
                         longPalindromes.Add(substring);
                     }
                 }
+                else
+                {
+                    longPalindromes.Add(substring);
+                }
             }
-            Dictionary<string, int> theLongestPalindromeFinder = new();
-            foreach (string palindrome in longPalindromes)
-            {
-                theLongestPalindromeFinder.Add(palindrome, palindrome.Count());
-            }
-            string theLongestPalindrome = theLongestPalindromeFinder.OrderByDescending(x => x.Value).First().Key;
-            return theLongestPalindrome.ToString();
+            string theLongestPalindrome = longPalindromes.MaxBy(s => s.Length);
+            return theLongestPalindrome;
 
+
+            // inefficient code in terms of time complexity
+
+            //dictionary<string, int> thelongestpalindromefinder = new();
+            //foreach (string palindrome in longpalindromes)
+            //{
+            //    if (thelongestpalindromefinder.containskey(palindrome))
+            //    {
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        thelongestpalindromefinder.add(palindrome, palindrome.count());
+            //    }
+            //}
+            //string thelongestpalindrome = thelongestpalindromefinder.orderbydescending(x => x.value).first().key;
 
 
             // My first attempt
