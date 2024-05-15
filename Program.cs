@@ -33,7 +33,7 @@ namespace Sandbox
             subarrayProductAlgo.NumSubarrayProductLessThanK([10, 5, 2, 6], 100);
             Solution solution = new Solution();
             _5 palindromeAlgo = new();
-            palindromeAlgo.LongestPalindrome("babad");
+            palindromeAlgo.LongestPalindrome("ccc");
         }
     }
 }
