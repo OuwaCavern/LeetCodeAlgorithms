@@ -21,17 +21,14 @@ namespace LeetCode_Algorithms
             List<string> longPalindromes = new List<string>();
             List<string> substringsOfTheWord = new List<string>();
             int lengthOfTheString = s.Length;
-            substringsOfTheWord.Add(s);
-            if (s.Length == 1)
-            {
-                longPalindromes.Add(s);
-            }
+            int substringLength = lengthOfTheString;
             for (int i = 0; i < lengthOfTheString; i++)
             {
-                for (int j = 1; j <= lengthOfTheString - i && j < lengthOfTheString; j++)
+                if (i + lengthOfTheString == substringLength)
                 {
-                    substringsOfTheWord.Add(s.Substring(i, j));
+                    substringLength--;
                 }
+                substringsOfTheWord.Add(s.Substring(i,lengthOfTheString));
             }
             foreach (string substring in substringsOfTheWord)
             {
