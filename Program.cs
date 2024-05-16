@@ -34,6 +34,8 @@ namespace Sandbox
             Solution solution = new Solution();
             _5 palindromeAlgo = new();
             palindromeAlgo.LongestPalindrome("ccc");
+            _8 atoiAlgo = new();
+            atoiAlgo.MyAtoi("42");
         }
     }
 }
