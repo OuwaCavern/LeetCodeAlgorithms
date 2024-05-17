@@ -35,7 +35,7 @@ namespace Sandbox
             _5 palindromeAlgo = new();
             palindromeAlgo.LongestPalindrome("ccc");
             _8 atoiAlgo = new();
-            atoiAlgo.MyAtoi("42");
+            atoiAlgo.MyAtoi("1234567890123456789012345678901234567890");
         }
     }
 }

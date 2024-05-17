@@ -14,7 +14,7 @@ namespace LeetCode_Algorithms
             // Initialize the array of digits
             char[] digitsArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
             // L-trim the string
-            s.TrimStart();
+            s = s.TrimStart();
             // Determine if the leftmost character is + or -, if it is a digit, assume +
             bool isPositive = true;
             bool signFound = false;
@@ -23,33 +23,49 @@ namespace LeetCode_Algorithms
             {
                 if (digitsArray.Contains(s[i]))
                 {
-                    theIntegerToBeReturned.Add(i);
+                    // - '0' part is for retrieving the integer value instead of ASCII value
+                    theIntegerToBeReturned.Add(s[i] - '0');
                     signFound = true;
                 }
-                else if (i == 1 && s[i] == '-' && signFound == false)
+                else if (i == 0 && s[i] == '-' && signFound == false)
                 {
                     isPositive = false;
+                }
+                else if (i == 0 && s[i] == '+' && signFound == false)
+                {
+                    continue;
                 }
                 else
                 {
                     break;
                 }
             }
-            string theIntegerString = theIntegerToBeReturned.ToString();
+            string theIntegerString = string.Join("", theIntegerToBeReturned);
             theIntegerString = isPositive ? theIntegerString : '-' + theIntegerString;
-            Int128 theIntegerInt128 = Int128.Parse(theIntegerString);
-            // Determine if next character(s) are digits, whenever there is not a digit, stop the function to read the string and return the integer formed by reading digits up to that point, if there were no digits up until that point, return 0
-
-            // If the result is greater than Math.Pow(2, 31) - 1,return Math.Pow(2, 31) - 1. If the result is less than Math.Pow(-2, 31), return Math.Pow(-2, 31)
-            if (theIntegerInt128 > Int32.MaxValue)
+            if (string.IsNullOrEmpty(theIntegerString) || theIntegerString == "-")
             {
-                theIntegerInt128 = Int32.MaxValue;
+                return 0;
             }
-            else if (theIntegerInt128 < Int32.MinValue)
+            else
             {
-                theIntegerInt128 = Int32.MinValue;
+                Int32 theIntegerInt128;
+                // If the result is greater than Math.Pow(2, 31) - 1,return Math.Pow(2, 31) - 1. If the result is less than Math.Pow(-2, 31), return Math.Pow(-2, 31)
+                if (!Int32.TryParse(theIntegerString,out theIntegerInt128))
+                {
+                    if (isPositive)
+                    {
+                        return Int32.MaxValue;
+                    }
+                    else
+                    {
+                        return Int32.MinValue;
+                    }
+                }
+                else
+                {
+                    return theIntegerInt128;
+                }
             }
-            return (int)theIntegerInt128;
         }
     }
 }
