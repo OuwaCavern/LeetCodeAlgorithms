@@ -36,6 +36,8 @@ namespace Sandbox
             palindromeAlgo.LongestPalindrome("ccc");
             _8 atoiAlgo = new();
             atoiAlgo.MyAtoi("1234567890123456789012345678901234567890");
+            _7 reverseintAlgo = new();
+            reverseintAlgo.Reverse(-2654);
         }
     }
 }
