@@ -25,7 +25,7 @@ namespace LeetCode_Algorithms
                     case 'V':
                         if (shouldSubstractOne)
                         {
-                            theSum += 4;
+                            theSum += 3;
                             break;
                         }
                         else
@@ -37,7 +37,7 @@ namespace LeetCode_Algorithms
                     case 'X':
                         if (shouldSubstractOne)
                         {
-                            theSum += 9;
+                            theSum += 8;
                             shouldSubstractOne = false;
                             shouldSubstractTen = true;
                             break;
@@ -51,7 +51,7 @@ namespace LeetCode_Algorithms
                     case 'L':
                         if (shouldSubstractTen)
                         {
-                            theSum += 40;
+                            theSum += 30;
                             shouldSubstractTen = false;
                             break;
                         }
@@ -65,7 +65,7 @@ namespace LeetCode_Algorithms
                         {
                             if (shouldSubstractTen)
                             {
-                                theSum += 90;
+                                theSum += 80;
                                 shouldSubstractTen = false;
                                 shouldSubstractOneHundred = true;
                                 break;
@@ -81,7 +81,7 @@ namespace LeetCode_Algorithms
                         {
                             if (shouldSubstractOneHundred)
                             {
-                                theSum += 400;
+                                theSum += 300;
                                 shouldSubstractOneHundred = false;
                                 break;
                             }
@@ -96,7 +96,7 @@ namespace LeetCode_Algorithms
                         {
                             if (shouldSubstractOneHundred)
                             {
-                                theSum += 900;
+                                theSum += 800;
                                 shouldSubstractOneHundred = false;
                                 break;
                             }
