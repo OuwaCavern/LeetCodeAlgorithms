@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Roxze\\Source\\Repos\\OuwaCavern\\LeetCodeAlgorithms\\LeetCode Algorithms.csproj",
+      "projectUniqueName": "C:\\Users\\Roxze\\source\\repos\\OuwaCavern\\LeetCodeAlgorithms\\LeetCode Algorithms.csproj",
       "projectName": "LeetCode Algorithms",
-      "projectPath": "C:\\Users\\Roxze\\Source\\Repos\\OuwaCavern\\LeetCodeAlgorithms\\LeetCode Algorithms.csproj",
+      "projectPath": "C:\\Users\\Roxze\\source\\repos\\OuwaCavern\\LeetCodeAlgorithms\\LeetCode Algorithms.csproj",
       "packagesPath": "C:\\Users\\Roxze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Roxze\\Source\\Repos\\OuwaCavern\\LeetCodeAlgorithms\\obj\\",
+      "outputPath": "C:\\Users\\Roxze\\source\\repos\\OuwaCavern\\LeetCodeAlgorithms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
