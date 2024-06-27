@@ -4,58 +4,55 @@
     {
         public bool IsValid(string s)
         {
-            const char normalParenthesesOpen = '(';
-            const char normalParenthesesClose = ')';
-            const char squareParenthesesOpen = '[';
-            const char squareParenthesesClose = ']';
-            const char curlyParenthsesOpen = '{';
-            const char curlyParenthesesClose = '}';
+            List<char> parentheses = new(s);
 
-            bool normalParenthesesOpened = false;
-            bool squareParenthesesOpened = false;
-            bool curlyParenthesesOpened = false;
-
-
-            foreach (char c in s)
+            for (int i = 0; i < parentheses.Count; i++)
             {
-                if (c == normalParenthesesOpen)
+                char theOpenedParentheses = parentheses[i];
+                parentheses.Remove(theOpenedParentheses);
+                if (theOpenedParentheses == '(' || theOpenedParentheses == '[' || theOpenedParentheses == '{')
                 {
-                    normalParenthesesOpened = true;
-                }
-                else if (c == squareParenthesesOpen)
-                {
-                    squareParenthesesOpened = true;
-                }
-                else if (c == curlyParenthsesOpen)
-                {
-                    curlyParenthesesOpened = true;
-                }
-                else if (c == normalParenthesesClose)
-                {
-                    if (normalParenthesesOpened && (squareParenthesesOpened || curlyParenthesesOpened))
+                    for (int j = i + 1; j < parentheses.Count; j++)
                     {
-                        return false;
+                        if (theOpenedParentheses == InverseParentheses(parentheses[j]))
+                        {
+                            parentheses.RemoveAt(j);
+                            break;
+                        }
+                        else if (j == parentheses.Count - 1)
+                        {
+                            return false;
+                        }
                     }
-                    normalParenthesesOpened = false;
                 }
-                else if (c == squareParenthesesClose)
+                else if (theOpenedParentheses == ')' || theOpenedParentheses == ']' || theOpenedParentheses == '}') 
                 {
-                    if (squareParenthesesOpened && (normalParenthesesOpened || curlyParenthesesOpened))
-                    {
-                        return false;
-                    }
-                    squareParenthesesOpened = false;
+                    return false;
                 }
-                else if (c == curlyParenthesesClose)
+                else
                 {
-                    if (curlyParenthesesOpened && (squareParenthesesOpened || normalParenthesesOpened))
-                    {
-                        return false;
-                    }
-                    curlyParenthesesOpened = false;
+                    return false;
                 }
             }
-            return (!normalParenthesesOpened) && (!squareParenthesesOpened) && (!curlyParenthesesOpened);
+        }
+        private char InverseParentheses(char parentheses)
+        {
+            switch (parentheses)
+            {
+                case '(':
+                    return ')';
+                case ')':
+                    return '(';
+                case '[':
+                    return ']';
+                case ']':
+                    return '[';
+                case '{':
+                    return '}';
+                case '}':
+                    return '{';
+            }
+            return parentheses;
         }
     }
 }
