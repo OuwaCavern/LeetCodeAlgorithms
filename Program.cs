@@ -40,6 +40,8 @@ namespace Sandbox
             //reverseintAlgo.Reverse(-2654);
             _14 commonPrefixAlgo = new();
             commonPrefixAlgo.LongestCommonPrefix(["flower", "flow", "flight"]);
+            _20 parenthesesAlgo = new();
+            parenthesesAlgo.IsValid("{[]}");
         }
     }
 }
