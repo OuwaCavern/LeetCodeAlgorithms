@@ -4,36 +4,32 @@
     {
         public bool IsValid(string s)
         {
-            List<char> parentheses = new(s);
+            if (s.Length  <= 1) return false;
 
-            for (int i = 0; i < parentheses.Count; i++)
+            Stack<char> parenthesesStack = new();
+            Dictionary<char, char> parentheses = new();
+            parentheses.Add('(', ')');
+            parentheses.Add('[', ']');
+            parentheses.Add('{', '}');
+
+            foreach (char c in s)
             {
-                char theOpenedParentheses = parentheses[i];
-                parentheses.Remove(theOpenedParentheses);
-                if (theOpenedParentheses == '(' || theOpenedParentheses == '[' || theOpenedParentheses == '{')
+                if (parentheses.ContainsKey(c))
                 {
-                    for (int j = i + 1; j < parentheses.Count; j++)
+                    parenthesesStack.Push(c);
+                }
+                else if (parenthesesStack.Count > 0)
+                {
+                    if (InverseParentheses(c) == parenthesesStack.Peek())
                     {
-                        if (theOpenedParentheses == InverseParentheses(parentheses[j]))
-                        {
-                            parentheses.RemoveAt(j);
-                            break;
-                        }
-                        else if (j == parentheses.Count - 1)
-                        {
-                            return false;
-                        }
+                        parenthesesStack.Pop();
                     }
+                    else return false;
                 }
-                else if (theOpenedParentheses == ')' || theOpenedParentheses == ']' || theOpenedParentheses == '}') 
-                {
-                    return false;
-                }
-                else
-                {
-                    return false;
-                }
+                else if (parenthesesStack.Count == 0) return false;
             }
+
+            return parenthesesStack.Count == 0;
         }
         private char InverseParentheses(char parentheses)
         {
