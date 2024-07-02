@@ -24,7 +24,7 @@ namespace LeetCode_Algorithms
 
             Stack<char> needleStack = new(needleStackFull);
 
-            foreach(char c in haystack)
+            for (int i = 0; i < haystack.Length; i++)
             {
                 if (needleStack.Count > 0 && needleStack.Peek() == hayStack.Peek())
                 {
@@ -36,10 +36,11 @@ namespace LeetCode_Algorithms
                 }
                 else
                 {
-                    return true;
+                    return haystack.Length - i;
                 }
                 hayStack.Pop();
             }
+            return -1;
         }
     }
 }
