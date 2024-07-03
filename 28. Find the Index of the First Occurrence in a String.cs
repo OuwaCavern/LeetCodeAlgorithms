@@ -10,37 +10,26 @@ namespace LeetCode_Algorithms
     {
         public int StrStr(string haystack, string needle)
         {
-            Stack<char> needleStackFull = new();
-            Stack<char> hayStack = new();
-
-            foreach (char c in needle)
-            {
-                needleStackFull.Push(c);
-            }
-            foreach (char c in haystack)
-            {
-                hayStack.Push(c);
-            }
-
-            Stack<char> needleStack = new(needleStackFull);
+            List<char> attemptedNeedle = new();
+            int startIndex = -1;
 
             for (int i = 0; i < haystack.Length; i++)
             {
-                if (needleStack.Count > 0 && needleStack.Peek() == hayStack.Peek())
+                if (needle[i] == haystack[i] && attemptedNeedle.Count == 0)
                 {
-                    needleStack.Pop();
+                    startIndex = i;
+                    attemptedNeedle.Add(haystack[i]);
                 }
-                else if (needleStack.Count != 0)
+                else if (needle[i] == haystack[i] && attemptedNeedle.Count != needle.Length)
                 {
-                    needleStack = new(needleStackFull);
+                    attemptedNeedle.Add(haystack[i]);
                 }
                 else
                 {
-                    return haystack.Length - i;
+                    break;
                 }
-                hayStack.Pop();
             }
-            return -1;
+            return startIndex;
         }
     }
 }
