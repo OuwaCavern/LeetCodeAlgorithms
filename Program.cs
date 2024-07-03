@@ -42,6 +42,8 @@ namespace Sandbox
             commonPrefixAlgo.LongestCommonPrefix(["flower", "flow", "flight"]);
             _20 parenthesesAlgo = new();
             parenthesesAlgo.IsValid("{[]}");
+            _28 firstStringAlgo = new();
+            firstStringAlgo.StrStr("leetcode", "leeto");
         }
     }
 }
