@@ -43,7 +43,7 @@ namespace Sandbox
             _20 parenthesesAlgo = new();
             parenthesesAlgo.IsValid("{[]}");
             _28 firstStringAlgo = new();
-            firstStringAlgo.StrStr("leetcode", "leeto");
+            firstStringAlgo.StrStr("mississippi", "issip");
         }
     }
 }

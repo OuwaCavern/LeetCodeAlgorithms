@@ -34,6 +34,7 @@
                 else if(i != haystack.Length -1)
                 {
                     attemptedNeedle.Clear();
+                    j = 0;
                     continue;
                 }
                 else

@@ -17,7 +17,28 @@ namespace LeetCode_Algorithms
         }
         internal string LongestPalindrome(string s)
         {
-            return "notfound";
+            Stack<char> frontStack = new();
+            Stack<char> backStack = new();
+            Stack<char> theLongestPalindrome = new();
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                frontStack.Push(s[i]);
+                backStack.Push(s[s.Length - i]);
+            }
+
+            foreach (char c in frontStack)
+            {
+                if (frontStack.Peek() == backStack.Peek())
+                {
+                    theLongestPalindrome.Push(frontStack.Peek());
+                } 
+            }
+
+            return "notFound";
+
+
+
 
             // My third attempt
 
