@@ -17,9 +17,8 @@ namespace LeetCode_Algorithms
                 return result;
             }
 
+            bool check = true;
 
-            IList<int> arrayToBeAdded = new List<int>();
-            int theCurrentSum = 0;
 
             foreach (int num1 in nums)
             {
@@ -40,11 +39,23 @@ namespace LeetCode_Algorithms
                         {
                             if (num1 + num2 + num3 + num4 == target)
                             {
+                                IList<int> arrayToBeAdded = new List<int>();
                                 arrayToBeAdded.Add(num1);
                                 arrayToBeAdded.Add(num2);
                                 arrayToBeAdded.Add(num3);
                                 arrayToBeAdded.Add(num4);
-                                result.Add(arrayToBeAdded);
+                                if (check)
+                                {
+                                    result.Add(arrayToBeAdded);
+                                    check = false;
+                                }
+                                foreach (IList<int> array in result)
+                                {
+                                    if (!(array.Contains(num1) && array.Contains(num2) && array.Contains(num3) && array.Contains(num4)))
+                                    {
+                                        result.Add(arrayToBeAdded);
+                                    }
+                                }
                             }
                         }
                     }
