@@ -46,8 +46,8 @@ namespace Sandbox
             //_28 firstStringAlgo = new();
             //firstStringAlgo.StrStr("mississippi", "issip");
 
-            _1455 prefixAlgo = new _1455();
-            Console.WriteLine(prefixAlgo.IsPrefixOfWord("i love eating burger", "burg"));
+            _3223 minimumLengthAlgo = new _3223();
+            Console.WriteLine(minimumLengthAlgo.MinimumLength("ucvbutgkohgbcobqeyqwppbxqoynxeuuzouyvmydfhrprdbuzwqebwuiejoxsxdhbmuaiscalnteocghnlisxxawxgcjloevrdcj"));
             Console.ReadLine();
         }
     }
