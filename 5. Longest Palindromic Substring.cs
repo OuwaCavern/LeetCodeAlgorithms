@@ -9,33 +9,51 @@ namespace LeetCode_Algorithms
 {
     public class _5
     {
-        public string Reverse(string s)
+        private static string Reverse(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);
         }
-        internal string LongestPalindrome(string s)
+        internal static string LongestPalindrome(string s)
         {
-            Stack<char> frontStack = new();
-            Stack<char> backStack = new();
-            Stack<char> theLongestPalindrome = new();
+            char[] charArray = s.ToCharArray();
+            char[] reverseCharArray = Reverse(s).ToCharArray();
 
-            for (int i = 0; i < s.Length; i++)
+            for (int i = 0; i < charArray.Length; i++)
             {
-                frontStack.Push(s[i]);
-                backStack.Push(s[s.Length - i]);
-            }
+                Dictionary<char, char> matchedChars = new Dictionary<char, char>();
+                if (charArray[i] == reverseCharArray[i])
+                    matchedChars.Add(charArray[i], reverseCharArray[i]);
 
-            foreach (char c in frontStack)
-            {
-                if (frontStack.Peek() == backStack.Peek())
-                {
-                    theLongestPalindrome.Push(frontStack.Peek());
-                } 
-            }
 
-            return "notFound";
+            }
+            return string.Empty;
+            
+
+
+
+            // My fourth attempt
+
+            //Stack<char> frontStack = new();
+            //Stack<char> backStack = new();
+            //Stack<char> theLongestPalindrome = new();
+
+            //for (int i = 0; i < s.Length; i++)
+            //{
+            //    frontStack.Push(s[i]);
+            //    backStack.Push(s[s.Length - i]);
+            //}
+
+            //foreach (char c in frontStack)
+            //{
+            //    if (frontStack.Peek() == backStack.Peek())
+            //    {
+            //        theLongestPalindrome.Push(frontStack.Peek());
+            //    } 
+            //}
+
+            //return "notFound";
 
 
 

@@ -46,8 +46,12 @@ namespace Sandbox
             //_28 firstStringAlgo = new();
             //firstStringAlgo.StrStr("mississippi", "issip");
 
-            _3223 minimumLengthAlgo = new _3223();
-            Console.WriteLine(minimumLengthAlgo.MinimumLength("ucvbutgkohgbcobqeyqwppbxqoynxeuuzouyvmydfhrprdbuzwqebwuiejoxsxdhbmuaiscalnteocghnlisxxawxgcjloevrdcj"));
+            //_3223 minimumLengthAlgo = new _3223();
+            //Console.WriteLine(minimumLengthAlgo.MinimumLength("ucvbutgkohgbcobqeyqwppbxqoynxeuuzouyvmydfhrprdbuzwqebwuiejoxsxdhbmuaiscalnteocghnlisxxawxgcjloevrdcj"));
+            //Console.ReadLine();
+
+            _2094 threeDigitEvenAlgo = new _2094();
+            Console.WriteLine(string.Join(',', threeDigitEvenAlgo.FindEvenNumbers([2, 2, 8, 8, 2])));
             Console.ReadLine();
         }
     }
