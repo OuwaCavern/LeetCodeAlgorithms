@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 using LeetCode_Algorithms;
-using static LeetCode_Algorithms._2;
+using static LeetCode_Algorithms._21;
 using System.Reflection.Metadata.Ecma335;
 
 namespace Sandbox
@@ -50,9 +50,13 @@ namespace Sandbox
             //Console.WriteLine(minimumLengthAlgo.MinimumLength("ucvbutgkohgbcobqeyqwppbxqoynxeuuzouyvmydfhrprdbuzwqebwuiejoxsxdhbmuaiscalnteocghnlisxxawxgcjloevrdcj"));
             //Console.ReadLine();
 
-            _2094 threeDigitEvenAlgo = new _2094();
-            Console.WriteLine(string.Join(',', threeDigitEvenAlgo.FindEvenNumbers([2, 2, 8, 8, 2])));
-            Console.ReadLine();
+            //_2094 threeDigitEvenAlgo = new _2094();
+            //Console.WriteLine(string.Join(',', threeDigitEvenAlgo.FindEvenNumbers([2, 2, 8, 8, 2])));
+            //Console.ReadLine();
+
+            //_21 mergeTwoSortedListsAlgo = new _21();
+            //Console.WriteLine(mergeTwoSortedListsAlgo.MergeTwoLists(l1, l2));
+            //Console.ReadLine();
         }
     }
 }
