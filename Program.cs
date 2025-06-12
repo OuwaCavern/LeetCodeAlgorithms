@@ -58,9 +58,9 @@ namespace Sandbox
             //Console.WriteLine(mergeTwoSortedListsAlgo.MergeTwoLists(l1, l2));
             //Console.ReadLine();
 
-            _3463 sameDigitsAlgo = new();
-            Console.WriteLine(sameDigitsAlgo.HasSameDigits("3902"));
-            Console.ReadLine();
+            //_3463 sameDigitsAlgo = new();
+            //Console.WriteLine(sameDigitsAlgo.HasSameDigits("3902"));
+            //Console.ReadLine();
         }
     }
 }
