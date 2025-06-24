@@ -61,6 +61,10 @@ namespace Sandbox
             //_3463 sameDigitsAlgo = new();
             //Console.WriteLine(sameDigitsAlgo.HasSameDigits("3902"));
             //Console.ReadLine();
+
+            _6 zigzagAlgo = new();
+            Console.WriteLine(zigzagAlgo.Convert("PAYPALISHIRING", 3));
+            Console.ReadLine();
         }
     }
 }
