@@ -66,8 +66,12 @@ namespace Sandbox
             //Console.WriteLine(zigzagAlgo.Convert("PAYPALISHIRING", 3));
             //Console.ReadLine();
 
-            _7 reverseIntAlgo = new();
-            Console.WriteLine(reverseIntAlgo.Reverse(-123));
+            //_7 reverseIntAlgo = new();
+            //Console.WriteLine(reverseIntAlgo.Reverse(-123));
+            //Console.ReadLine();
+
+            _10 regExAlgo = new();
+            Console.WriteLine(regExAlgo.IsMatch("bbbba", ".*a*a"));
             Console.ReadLine();
         }
     }
