@@ -70,8 +70,12 @@ namespace Sandbox
             //Console.WriteLine(reverseIntAlgo.Reverse(-123));
             //Console.ReadLine();
 
-            _10 regExAlgo = new();
-            Console.WriteLine(regExAlgo.IsMatch("bbbba", ".*a*a"));
+            //_10 regExAlgo = new();
+            //Console.WriteLine(regExAlgo.IsMatch("bbbba", ".*a*a"));
+            //Console.ReadLine();
+
+            _11 waterAlgo = new();
+            Console.WriteLine(waterAlgo.MaxArea([1,8,6,2,5,4,8,3,7]));
             Console.ReadLine();
         }
     }
