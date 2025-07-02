@@ -11,7 +11,6 @@ namespace LeetCode_Algorithms
 {
     public class _11
     {
-
         public int MaxArea(int[] height)
         {
             int heightLength = height.Length;
