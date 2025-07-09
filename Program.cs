@@ -82,8 +82,12 @@ namespace Sandbox
             //Console.WriteLine(intToRomanAlgo.IntToRoman(3749));
             //Console.ReadLine();
 
-            _3304 kthCharAlgo = new();
-            Console.WriteLine(kthCharAlgo.KthCharacter(5));
+            //_3304 kthCharAlgo = new();
+            //Console.WriteLine(kthCharAlgo.KthCharacter(5));
+            //Console.ReadLine();
+
+            _15 _3sumAlgo = new();
+            Console.WriteLine(_3sumAlgo.ThreeSum([0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0]));
             Console.ReadLine();
         }
     }
