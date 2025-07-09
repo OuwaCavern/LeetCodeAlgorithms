@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -13,54 +14,90 @@ namespace LeetCode_Algorithms
         public IList<IList<int>> ThreeSum(int[] nums)
         {
             List<IList<int>> result = new List<IList<int>>();
+            Array.Sort(nums);
             int length = nums.Length;
 
             for (int i = 0; i < length; i++)
             {
-                for (int j = i + 1; j < length; j++)
+                if (i > 0 && nums[i] == nums[i - 1]) continue;
+                int j = i + 1;
+                int k = length - 1;
+                while (j < k)
                 {
-                    for(int k = j + 1; k < length; k++)
+                    if (nums[i] + nums[j] == -nums[k])
                     {
-                        if (nums[i] + nums[j] == -nums[k])
+                        result.Add(new List<int> { nums[i], nums[j], nums[k] });
+                        do
                         {
-                            List<int> integersToBeAdded = new();
-                            integersToBeAdded.Add(nums[i]);
-                            integersToBeAdded.Add(nums[j]);
-                            integersToBeAdded.Add(nums[k]);
-                            if (!TripletAlreadyExists(result, integersToBeAdded)) result.Add(integersToBeAdded);
+                            j++;
                         }
+                        while (j < k && nums[j] == nums[j - 1]);
+
+                        do
+                        {
+                            k--;
+                        }
+                        while (j < k && nums[k] == nums[k + 1]);
                     }
+                    else if (nums[i] + nums[j] + nums[k] > 0)
+                        k--;
+                    else
+                        j++;
                 }
             }
 
             return result;
-
-            static bool TripletAlreadyExists(List<IList<int>> triplets, IList<int> tripletToCompare)
-            {
-                foreach (IList<int> triplet in triplets)
-                {
-                    Dictionary<int, int> countOfOccurrences = new Dictionary<int, int>();
-                    foreach (int i in triplet)
-                    {
-                        if(countOfOccurrences.ContainsKey(i))
-                            countOfOccurrences[i]++;
-                        else
-                            countOfOccurrences.Add(i, 1);
-                    }
-                    foreach (int i in tripletToCompare)
-                    {
-                        if (countOfOccurrences.ContainsKey(i))
-                            countOfOccurrences[i]--;
-                        else
-                            break;
-                    }
-                    if (countOfOccurrences.Values.All(x => x == 0)) return true;
-                }
-                return false;
-            }
         }
     }
 }
+
+            /// Fourth attempt (Time limit exceeeded9
+            //List<IList<int>> result = new List<IList<int>>();
+            //int length = nums.Length;
+
+            //for (int i = 0; i < length; i++)
+            //{
+            //    for (int j = i + 1; j < length; j++)
+            //    {
+            //        for(int k = j + 1; k < length; k++)
+            //        {
+            //            if (nums[i] + nums[j] == -nums[k])
+            //            {
+            //                List<int> integersToBeAdded = new();
+            //                integersToBeAdded.Add(nums[i]);
+            //                integersToBeAdded.Add(nums[j]);
+            //                integersToBeAdded.Add(nums[k]);
+            //                if (!TripletAlreadyExists(result, integersToBeAdded)) result.Add(integersToBeAdded);
+            //            }
+            //        }
+            //    }
+            //}
+
+            //return result;
+
+            //static bool TripletAlreadyExists(List<IList<int>> triplets, IList<int> tripletToCompare)
+            //{
+            //    foreach (IList<int> triplet in triplets)
+            //    {
+            //        Dictionary<int, int> countOfOccurrences = new Dictionary<int, int>();
+            //        foreach (int i in triplet)
+            //        {
+            //            if(countOfOccurrences.ContainsKey(i))
+            //                countOfOccurrences[i]++;
+            //            else
+            //                countOfOccurrences.Add(i, 1);
+            //        }
+            //        foreach (int i in tripletToCompare)
+            //        {
+            //            if (countOfOccurrences.ContainsKey(i))
+            //                countOfOccurrences[i]--;
+            //            else
+            //                break;
+            //        }
+            //        if (countOfOccurrences.Values.All(x => x == 0)) return true;
+            //    }
+            //    return false;
+            //}
             // Third attempt
             //List<IList<int>> result = new List<IList<int>>();
             //int length = nums.Length;
