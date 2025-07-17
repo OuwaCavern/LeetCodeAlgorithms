@@ -86,8 +86,12 @@ namespace Sandbox
             //Console.WriteLine(kthCharAlgo.KthCharacter(5));
             //Console.ReadLine();
 
-            _15 _3sumAlgo = new();
-            Console.WriteLine(_3sumAlgo.ThreeSum([0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0]));
+            //_15 _3sumAlgo = new();
+            //Console.WriteLine(_3sumAlgo.ThreeSum([0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0]));
+            //Console.ReadLine();
+
+            _16 _3sumClosestAlgo = new();
+            Console.WriteLine(_3sumClosestAlgo.ThreeSumClosest([-1, 2, 1, -4], 1));
             Console.ReadLine();
         }
     }
