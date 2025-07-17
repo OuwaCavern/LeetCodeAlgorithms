@@ -90,8 +90,12 @@ namespace Sandbox
             //Console.WriteLine(_3sumAlgo.ThreeSum([0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0]));
             //Console.ReadLine();
 
-            _16 _3sumClosestAlgo = new();
-            Console.WriteLine(_3sumClosestAlgo.ThreeSumClosest([-1, 2, 1, -4], 1));
+            //_16 _3sumClosestAlgo = new();
+            //Console.WriteLine(_3sumClosestAlgo.ThreeSumClosest([-1, 2, 1, -4], 1));
+            //Console.ReadLine();
+
+            _17 _letterCombAlgo = new();
+            Console.WriteLine(_letterCombAlgo.LetterCombinations("23"));
             Console.ReadLine();
         }
     }
