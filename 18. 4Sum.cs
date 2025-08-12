@@ -11,57 +11,95 @@ namespace LeetCode_Algorithms
     {
         public IList<IList<int>> FourSum(int[] nums, int target)
         {
-            IList<IList<int>> result = new List<IList<int>>();
-            if (nums.Length < 5)
+            List<IList<int>> result = new List<IList<int>>();
+            Array.Sort(nums);
+            int length = nums.Length;
+
+            for (int i = 0; i < length; i++)
             {
-                return result;
-            }
-
-            bool check = true;
-
-
-            foreach (int num1 in nums)
-            {
-                int theFirstNumberToBeAdded = num1;
-                int indexOfFirstNumberToBeAdded = Array.IndexOf(nums, theFirstNumberToBeAdded);
-                int[] theArrayAfterFirstNumberIsRemoved = nums.Where((val, idx) => idx != indexOfFirstNumberToBeAdded).ToArray();
-                foreach (int num2 in theArrayAfterFirstNumberIsRemoved)
+                if (i > 0 && nums[i] == nums[i - 1]) continue;
+                int j = i + 1;
+                int k = length - 1;
+                while (j < k)
                 {
-                    int theSecondNumberToBeAdded = num2;
-                    int indexOfSecondNumberToBeAdded = Array.IndexOf(theArrayAfterFirstNumberIsRemoved, num2);
-                    int[] theArrayAfterSecondNumberIsRemoved = theArrayAfterFirstNumberIsRemoved.Where((val, idx) => idx != indexOfSecondNumberToBeAdded).ToArray();
-                    foreach (int num3 in theArrayAfterSecondNumberIsRemoved)
+                    for (int l = j + 1; l < k; l++)
                     {
-                        int theThirdNumberToBeAdded = num3;
-                        int indexOfThirdNumberToBeAdded = Array.IndexOf(theArrayAfterSecondNumberIsRemoved, num3);
-                        int[] theArrayAfterThirdNumberIsRemoved = theArrayAfterSecondNumberIsRemoved.Where((val, idx) => idx != indexOfThirdNumberToBeAdded).ToArray();
-                        foreach (int num4 in theArrayAfterThirdNumberIsRemoved)
-                        {
-                            if (num1 + num2 + num3 + num4 == target)
-                            {
-                                IList<int> arrayToBeAdded = new List<int>();
-                                arrayToBeAdded.Add(num1);
-                                arrayToBeAdded.Add(num2);
-                                arrayToBeAdded.Add(num3);
-                                arrayToBeAdded.Add(num4);
-                                if (check)
-                                {
-                                    result.Add(arrayToBeAdded);
-                                    check = false;
-                                }
-                                foreach (IList<int> array in result)
-                                {
-                                    if (!(array.Contains(num1) && array.Contains(num2) && array.Contains(num3) && array.Contains(num4)))
-                                    {
-                                        result.Add(arrayToBeAdded);
-                                    }
-                                }
-                            }
-                        }
+                        if (nums[i] + nums[j] + nums[k] + nums[l] == target)
+                            result.Add(new List<int> { nums[i], nums[j], nums[k], nums[l] });
                     }
+                    do
+                    {
+                        j++;
+                    }
+                    while (j < k && nums[j] == nums[j - 1]);
+
+                    do
+                    {
+                        k--;
+                    }
+                    while (j < k && nums[k] == nums[k + 1]);
+                    if (nums[i] + nums[j] + nums[k] > 0)
+                        k--;
+                    else
+                        j++;
                 }
             }
-            return result;
+                return result;
         }
     }
 }
+
+
+
+    /// What the hell is this
+//IList<IList<int>> result = new List<IList<int>>();
+//if (nums.Length < 5)
+//{
+//    return result;
+//}
+
+//bool check = true;
+
+
+//foreach (int num1 in nums)
+//{
+//    int theFirstNumberToBeAdded = num1;
+//    int indexOfFirstNumberToBeAdded = Array.IndexOf(nums, theFirstNumberToBeAdded);
+//    int[] theArrayAfterFirstNumberIsRemoved = nums.Where((val, idx) => idx != indexOfFirstNumberToBeAdded).ToArray();
+//    foreach (int num2 in theArrayAfterFirstNumberIsRemoved)
+//    {
+//        int theSecondNumberToBeAdded = num2;
+//        int indexOfSecondNumberToBeAdded = Array.IndexOf(theArrayAfterFirstNumberIsRemoved, num2);
+//        int[] theArrayAfterSecondNumberIsRemoved = theArrayAfterFirstNumberIsRemoved.Where((val, idx) => idx != indexOfSecondNumberToBeAdded).ToArray();
+//        foreach (int num3 in theArrayAfterSecondNumberIsRemoved)
+//        {
+//            int theThirdNumberToBeAdded = num3;
+//            int indexOfThirdNumberToBeAdded = Array.IndexOf(theArrayAfterSecondNumberIsRemoved, num3);
+//            int[] theArrayAfterThirdNumberIsRemoved = theArrayAfterSecondNumberIsRemoved.Where((val, idx) => idx != indexOfThirdNumberToBeAdded).ToArray();
+//            foreach (int num4 in theArrayAfterThirdNumberIsRemoved)
+//            {
+//                if (num1 + num2 + num3 + num4 == target)
+//                {
+//                    IList<int> arrayToBeAdded = new List<int>();
+//                    arrayToBeAdded.Add(num1);
+//                    arrayToBeAdded.Add(num2);
+//                    arrayToBeAdded.Add(num3);
+//                    arrayToBeAdded.Add(num4);
+//                    if (check)
+//                    {
+//                        result.Add(arrayToBeAdded);
+//                        check = false;
+//                    }
+//                    foreach (IList<int> array in result)
+//                    {
+//                        if (!(array.Contains(num1) && array.Contains(num2) && array.Contains(num3) && array.Contains(num4)))
+//                        {
+//                            result.Add(arrayToBeAdded);
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+//return result;

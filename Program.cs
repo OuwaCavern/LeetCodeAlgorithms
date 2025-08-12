@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 using LeetCode_Algorithms;
-using static LeetCode_Algorithms._21;
+using static LeetCode_Algorithms._19;
 using System.Reflection.Metadata.Ecma335;
 
 namespace Sandbox
@@ -94,8 +94,17 @@ namespace Sandbox
             //Console.WriteLine(_3sumClosestAlgo.ThreeSumClosest([-1, 2, 1, -4], 1));
             //Console.ReadLine();
 
-            _17 _letterCombAlgo = new();
-            Console.WriteLine(_letterCombAlgo.LetterCombinations("23"));
+            //_17 _letterCombAlgo = new();
+            //Console.WriteLine(_letterCombAlgo.LetterCombinations("23"));
+            //Console.ReadLine();
+
+            _19 _removeNthAlgo = new();
+            ListNode listNode = new ListNode(1);
+            listNode.next = new ListNode(2);
+            listNode.next.next = new ListNode(3);
+            listNode.next.next.next = new ListNode(4);
+            listNode.next.next.next.next = new ListNode(5);
+            Console.WriteLine(_removeNthAlgo.RemoveNthFromEnd(listNode, 1));
             Console.ReadLine();
         }
     }

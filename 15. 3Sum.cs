@@ -51,7 +51,7 @@ namespace LeetCode_Algorithms
     }
 }
 
-            /// Fourth attempt (Time limit exceeeded9
+            /// Fourth attempt (Time limit exceeeded)
             //List<IList<int>> result = new List<IList<int>>();
             //int length = nums.Length;
 
