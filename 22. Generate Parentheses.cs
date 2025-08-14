@@ -8,45 +8,45 @@ namespace LeetCode_Algorithms
 {
     internal class _22
     {
-        public IList<string> GenerateParenthesis(int n)
-        {
-            List<string> result = new();
+        //public IList<string> GenerateParenthesis(int n)
+        //{
+        //    List<string> result = new();
 
-            int totalLeftParentheses = n;
-            int totalRightParentheses = n;
+        //    int totalLeftParentheses = n;
+        //    int totalRightParentheses = n;
 
-            bool shouldAddLeftParentheses = true;
-            bool shouldAddRightParentheses = false;
+        //    bool shouldAddLeftParentheses = true;
+        //    bool shouldAddRightParentheses = false;
 
-            StringBuilder validParentheses = new StringBuilder();
+        //    StringBuilder validParentheses = new StringBuilder();
 
-            while (totalRightParentheses > 0)
-            {
-                if (shouldAddLeftParentheses)
-                {
-                    validParentheses.Append('(');
-                    totalLeftParentheses--;
-                    shouldAddLeftParentheses = false;
-                    shouldAddRightParentheses = true;
-                }
-                else if (shouldAddRightParentheses)
-                {
-                    validParentheses.Append(')');
-                    totalRightParentheses--;
-                    shouldAddRightParentheses = false;
-                    shouldAddLeftParentheses = true;
-                }
+        //    while (totalRightParentheses > 0)
+        //    {
+        //        if (shouldAddLeftParentheses)
+        //        {
+        //            validParentheses.Append('(');
+        //            totalLeftParentheses--;
+        //            shouldAddLeftParentheses = false;
+        //            shouldAddRightParentheses = true;
+        //        }
+        //        else if (shouldAddRightParentheses)
+        //        {
+        //            validParentheses.Append(')');
+        //            totalRightParentheses--;
+        //            shouldAddRightParentheses = false;
+        //            shouldAddLeftParentheses = true;
+        //        }
 
-            }
+        //    }
 
-            result.Add(validParentheses.ToString())
+        //    result.Add(validParentheses.ToString())
 
-            for (int i = 1; i < n * 2 - 2)
-            {
-                string newParenthesesCombination = result[0];
-                newParenthesesCombination[i] = 
-            }
-        }
+        //    for (int i = 1; i < n * 2 - 2)
+        //    {
+        //        string newParenthesesCombination = result[0];
+        //        newParenthesesCombination[i] = 
+        //    }
+        //}
 
 
 

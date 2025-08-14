@@ -98,13 +98,18 @@ namespace Sandbox
             //Console.WriteLine(_letterCombAlgo.LetterCombinations("23"));
             //Console.ReadLine();
 
-            _19 _removeNthAlgo = new();
-            ListNode listNode = new ListNode(1);
-            listNode.next = new ListNode(2);
-            listNode.next.next = new ListNode(3);
-            listNode.next.next.next = new ListNode(4);
-            listNode.next.next.next.next = new ListNode(5);
-            Console.WriteLine(_removeNthAlgo.RemoveNthFromEnd(listNode, 1));
+            //_19 _removeNthAlgo = new();
+            //ListNode listNode = new ListNode(1);
+            //listNode.next = new ListNode(2);
+            //listNode.next.next = new ListNode(3);
+            //listNode.next.next.next = new ListNode(4);
+            //listNode.next.next.next.next = new ListNode(5);
+            //Console.WriteLine(_removeNthAlgo.RemoveNthFromEnd(listNode, 1));
+            //Console.ReadLine();
+
+            _2264 largestSameDigitAlgo = new _2264();
+            string result = largestSameDigitAlgo.LargestGoodInteger("6777133339");
+            Console.WriteLine(result);
             Console.ReadLine();
         }
     }
