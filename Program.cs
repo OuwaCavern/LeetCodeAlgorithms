@@ -4,6 +4,7 @@ using System.Linq;
 using LeetCode_Algorithms;
 using static LeetCode_Algorithms._19;
 using System.Reflection.Metadata.Ecma335;
+using System.Net.WebSockets;
 
 namespace Sandbox
 {
@@ -111,6 +112,14 @@ namespace Sandbox
             //string result = largestSameDigitAlgo.LargestGoodInteger("6777133339");
             //Console.WriteLine(result);
             //Console.ReadLine();
+
+            _18 foursomeAlgo = new();
+            var result = foursomeAlgo.FourSum([2, 2, 2, 2, 2], 8);
+            foreach(var i in result[0])
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
         }
     }
 }

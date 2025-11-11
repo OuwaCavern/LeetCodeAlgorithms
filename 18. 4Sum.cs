@@ -11,7 +11,33 @@ namespace LeetCode_Algorithms
     {
         public IList<IList<int>> FourSum(int[] nums, int target)
         {
-            List<IList<int>> result = new List<IList<int>>();
+            List<IList<int>> theResult = [];
+            int[] originalNums = nums;
+            for (int i = 0; i < nums.Length && nums.Length > 3; i++)
+            {
+                int numToBeAddedLast = originalNums[i];
+                int threeSumResultShouldBe = target - originalNums[i];
+                nums = originalNums.Skip(i + 1).ToArray();
+
+                List<List<int>> results = ThreeSum(nums, threeSumResultShouldBe);
+
+                if (results.Count > 0)
+                {
+                    foreach (var threeElementResult in results)
+                    {
+                        threeElementResult.Add(numToBeAddedLast);
+                        if (theResult.Any(list => list.SequenceEqual(threeElementResult))) continue;
+                        theResult.Add(threeElementResult);
+                    }
+
+                }
+            }
+            return theResult;
+        }
+
+        private List<List<int>> ThreeSum(int[] nums, int target)
+        {
+            List<List<int>> result = new List<List<int>>();
             Array.Sort(nums);
             int length = nums.Length;
 
@@ -22,36 +48,36 @@ namespace LeetCode_Algorithms
                 int k = length - 1;
                 while (j < k)
                 {
-                    for (int l = j + 1; l < k; l++)
+                    if (nums[i] + nums[j] + nums[k] == target)
                     {
-                        if (nums[i] + nums[j] + nums[k] + nums[l] == target)
-                            result.Add(new List<int> { nums[i], nums[j], nums[k], nums[l] });
-                    }
-                    do
-                    {
-                        j++;
-                    }
-                    while (j < k && nums[j] == nums[j - 1]);
+                        result.Add(new List<int> { nums[i], nums[j], nums[k] });
+                        do
+                        {
+                            j++;
+                        }
+                        while (j < k && nums[j] == nums[j - 1]);
 
-                    do
-                    {
-                        k--;
+                        do
+                        {
+                            k--;
+                        }
+                        while (j < k && nums[k] == nums[k + 1]);
                     }
-                    while (j < k && nums[k] == nums[k + 1]);
-                    if (nums[i] + nums[j] + nums[k] > 0)
+                    else if (nums[i] + nums[j] + nums[k] > target)
                         k--;
                     else
                         j++;
                 }
             }
-                return result;
+
+            return result;
         }
     }
 }
 
 
 
-    /// What the hell is this
+/// What the hell is this
 //IList<IList<int>> result = new List<IList<int>>();
 //if (nums.Length < 5)
 //{
