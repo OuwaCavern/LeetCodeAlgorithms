@@ -113,12 +113,16 @@ namespace Sandbox
             //Console.WriteLine(result);
             //Console.ReadLine();
 
-            _18 foursomeAlgo = new();
-            var result = foursomeAlgo.FourSum([2, 2, 2, 2, 2], 8);
-            foreach(var i in result[0])
-            {
-                Console.WriteLine(i);
-            }
+            //_18 foursomeAlgo = new();
+            //var result = foursomeAlgo.FourSum([2, 2, 2, 2, 2], 8);
+            //foreach(var i in result[0])
+            //{
+            //    Console.WriteLine(i);
+            //}
+            //Console.ReadLine();
+
+            _717 oneBitAndTwoBitCharactersAlgo = new _717();
+            Console.WriteLine(oneBitAndTwoBitCharactersAlgo.IsOneBitCharacter([1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0])); 
             Console.ReadLine();
         }
     }
