@@ -121,8 +121,12 @@ namespace Sandbox
             //}
             //Console.ReadLine();
 
-            _717 oneBitAndTwoBitCharactersAlgo = new _717();
-            Console.WriteLine(oneBitAndTwoBitCharactersAlgo.IsOneBitCharacter([1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0])); 
+            //_717 oneBitAndTwoBitCharactersAlgo = new _717();
+            //Console.WriteLine(oneBitAndTwoBitCharactersAlgo.IsOneBitCharacter([1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0])); 
+            //Console.ReadLine();
+
+            _29 divideTwoIntAlgo = new();
+            Console.WriteLine(divideTwoIntAlgo.Divide(-2147483648, 2));
             Console.ReadLine();
         }
     }
